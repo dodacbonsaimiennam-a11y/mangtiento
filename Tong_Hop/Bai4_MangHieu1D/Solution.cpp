@@ -1,21 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-void solve() {
-    // TODO: Implement solution here
-}
-
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    
-    // Đọc ghi file theo chuẩn thi đấu
+    ios_base::sync_with_stdio(false); cin.tie(NULL);
     if (fopen("BAI4.INP", "r")) {
         freopen("BAI4.INP", "r", stdin);
         freopen("BAI4.OUT", "w", stdout);
     }
-    
-    solve();
-    
+    int n, q;
+    if (!(cin >> n >> q)) return 0;
+    vector<long long> diff(n + 2, 0);
+    while (q--) {
+        int l, r;
+        long long v;
+        cin >> l >> r >> v;
+        diff[l] += v;
+        diff[r + 1] -= v;
+    }
+    long long cur = 0;
+    for (int i = 1; i <= n; ++i) {
+        cur += diff[i];
+        cout << cur << (i == n ? "" : " ");
+    }
+    cout << "\n";
     return 0;
 }
