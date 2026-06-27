@@ -21,16 +21,25 @@ Hệ thống tài liệu bao gồm **25 bài tập** được chia làm 2 phần
 *Nằm trong thư mục `Tong_Hop`*
 Bộ 5 bài tập này là bài kiểm tra năng lực cuối khóa (Mock Test). Các bài trải dài đủ 5 mức độ (từ dễ đến cực khó), mang tính chất tổng hợp các kỹ thuật đã học để đánh giá thực lực tối đa của học viên.
 
+## 3. Hệ Thống Mã Nguồn Giải Thuật Tối Ưu (Solutions)
+Toàn bộ 25 bài tập đều có mã nguồn lời giải bằng hai ngôn ngữ **C++** và **Python**, được viết với cấu trúc IO File thi đấu (tự động đọc ghi file qua `freopen`).
+*   Các giải thuật được tối ưu hóa đến mức cực hạn (O(N) hoặc O(N log N)), sử dụng những tư duy hiện đại nhất.
+*   Bạn có thể đọc tư duy thuật toán chi tiết, giải thích các Subtask và code mẫu từng bài trong bộ Báo cáo **`Loi_Giai_Chi_Tiet_25Bai.docx`** (hoặc bản markdown `.md`).
+
 ## 4. Hệ Thống Test Đầu Cuối (End-to-End Test IN/OUT) Khổng Lồ
 Một điểm nhấn tạo nên giá trị học thuật vô giá của bộ tài liệu này là **Hệ thống Test Cases độc lập** được đính kèm cho toàn bộ 25 bài tập. Đây không phải là các test được sinh ngẫu nhiên hời hợt, mà là một hệ thống được lập trình rà soát vô cùng kỹ lưỡng:
 
-*   **Quy mô đồ sộ:** Từng bài tập đều có 10 Test cases hoàn chỉnh (định dạng `*.INP` và `*.OUT`), tổng cộng 250 files Input/Output.
-*   **Phủ kín mọi giới hạn dữ liệu (Subtasks):** Hệ thống test được phân tách theo đúng cấu trúc Subtask. Các bài toán có giới hạn $N, Q \le 2 \cdot 10^5$ đều có các bộ test nén dữ liệu khổng lồ để ép các thuật toán có độ phức tạp $O(N^2)$ phải báo lỗi Time Limit Exceeded (TLE).
-*   **Kiểm tra mảng góc (Corner Cases):** Các trường hợp ranh giới mỏng manh nhất như mảng toàn số âm, mảng toàn số 0, hay các truy vấn có kích thước $L = R$ đều được đưa vào để đảm bảo tính đúng đắn tuyệt đối của mã nguồn.
-*   **Tính chính xác tuyệt đối:** Tất cả Output đều được sinh ra và đối soát (cross-check) thông qua hệ thống thuật toán giải (Solution Code) viết bằng Python độ chính xác cao.
+*   **Quy mô đồ sộ:** Từng bài tập đều có 10 Test cases hoàn chỉnh (định dạng `*.INP` và `*.OUT`), tổng cộng **500 files Input/Output** khổng lồ chứa hàng triệu dòng dữ liệu.
+*   **Phủ kín mọi giới hạn dữ liệu (Subtasks):** Hệ thống test được phân tách theo đúng cấu trúc. 
+    - Test 1 - 5: Các Subtask nhỏ và Corner Cases tinh vi.
+    - Test 6 - 10: Các bộ test nén dữ liệu khổng lồ $N, Q \le 2 \cdot 10^5$ (Thậm chí 1 triệu truy vấn) để ép các thuật toán có độ phức tạp $O(N^2)$ phải báo lỗi Time Limit Exceeded (TLE).
+*   **Tính chính xác tuyệt đối:** Tất cả Output đều được sinh ra và đối soát (cross-check) tự động bằng trình Validation độc lập để khớp hoàn hảo 100% với giới hạn biên của đề bài.
 
 ## 5. Hướng Dẫn Sử Dụng
-*   **Với Giáo Viên/Huấn Luyện Viên:** Có thể trực tiếp in các file `Bao_Cao_Cuoi.docx` để phát cho học sinh làm tài liệu lý thuyết. Sử dụng các file Test IN/OUT trong từng thư mục bài tập để import thẳng lên các hệ thống tự động chấm điểm (Themis, CMS, DomJudge, HackerRank...).
+*   **Với Giáo Viên/Huấn Luyện Viên:** 
+    - Sử dụng các file đề bài chuẩn **`De_Bai.md`** hoặc **`De_Bai_V6.docx`** để phát cho học sinh làm tài liệu.
+    - Cung cấp **`Loi_Giai_Chi_Tiet_25Bai.docx`** làm cẩm nang học thuật, bài giải chi tiết lý thuyết thuật toán.
+    - Sử dụng các file Test IN/OUT trong từng thư mục `test/` để import thẳng lên các hệ thống tự động chấm điểm (Themis, CMS, DomJudge, HackerRank...).
 *   **Với Học Sinh:** Khuyến nghị làm bài theo đúng trình tự từ Bài 1 đến Bài 20 để cảm nhận sự nâng cấp trong tư duy. Không nên chuyển sang bài mới khi chưa hiểu rõ "Phân tích giải thuật" của bài trước đó. Cần hoàn thành trọn vẹn bộ 20 bài trước khi thử sức với 5 bài trong thư mục `Tong_Hop`.
 
 ---
